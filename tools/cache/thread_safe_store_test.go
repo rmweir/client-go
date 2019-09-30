@@ -17,8 +17,9 @@ limitations under the License.
 package cache
 
 import (
-	"k8s.io/kubernetes/staging/src/k8s.io/apimachinery/pkg/util/sets"
 	"testing"
+
+	"k8s.io/apimachinery/pkg/util/sets"
 )
 
 func TestAddIndexerAfterAdd(t *testing.T) {
@@ -64,7 +65,7 @@ func TestAddIndexerAfterAdd(t *testing.T) {
 		"second": func(obj interface{}) ([]string, error) {
 			v := obj.(string)
 			return []string{
-				v +"2",
+				v + "2",
 			}, nil
 		},
 	})
@@ -112,4 +113,3 @@ func TestAddIndexerAfterAdd(t *testing.T) {
 		t.Errorf("expected %v does not match actual %v", expected, actual)
 	}
 }
-
