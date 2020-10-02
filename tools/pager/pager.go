@@ -28,7 +28,7 @@ import (
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 )
 
-const defaultPageSize = 500
+const defaultPageSize = 10000
 const defaultPageBufferSize = 10
 
 // ListPageFunc returns a list object for the given list options.
